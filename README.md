@@ -26,7 +26,7 @@ After completing this lab, I will be able to:
 ### Secure Baseline Environment
 - **Ubuntu Server VM** - Primary lab environment
 - **User Groups**: `admin`, `dev`, `auditor`
-- **Users**: `amit-admin`, `amit1-dev`, `amit2-dev` , `amit-auditor`
+- **Users**: `ritesh-admin`, `ritesh1-dev`, `ritesh2-dev` , `ritesh-auditor`
 - **Secure Sudo Rules**: Least-privilege commands per group
 - **File Permissions**: Proper ownership and access controls
 
