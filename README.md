@@ -70,57 +70,6 @@ After completing this lab, I will be able to:
                    **%dev ALL=(root) /usr/bin/systemctl restart nginx,   /usr/bin/systemctl status nginx**
 - **Auditors** - No sudo access
 
-## Audit Rules
-
-**Monitor critical IAM files**  \
-**-w /etc/sudoers -p wa -k sudoers_changes** \
-**-w /etc/passwd -p wa -k userdb_changes**  \
-**-w /etc/shadow -p wa -k userdb_changes**  
-
-## 📊 Sample Findings & Remediation
-**1. Finding: World-readable Backup Files**
-- Risk: Sensitive user data exposure
-- Fix: sudo chmod 600 /etc/*.backup
-- Evidence:
-   Before: -rw-r--r--  \
-                   After: -rw-------
-
-**2. Finding: Insecure Home Directory**
-- Risk: Unauthorized access to user data
-- Fix: sudo chmod 700 /home/username
-- Evidence:
-   Before: drwxr-xr-x  \
-                 After: drwx------
-
-**3. Finding: World-writable Log Directory**
-- Risk: Log tampering or privilege escalation
-- Fix: sudo chmod 755 /var/log/directory
-- Evidence:
-   Before: drwxrwxrwx \
-                 After: drwxr-xr-x
-
-## 🎓 Learning Outcomes
-  **Technical Skills**
-
-- Linux user and group management
-- Sudoers file configuration and security
-- POSIX permissions and ACLs
-- Auditd configuration and monitoring
-- Security vulnerability assessment
-- System hardening techniques
-
-## 🙏 Acknowledgments
-- Ubuntu Security Team
-- Linux Audit Framework
-
-<div align="center">
-</div> 
-
-
-
-
-
-
 
 
 
